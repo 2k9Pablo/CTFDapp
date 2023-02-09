@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "next": "^13.1.6",
     "truffle": "^5.7.5"
   }
 }
