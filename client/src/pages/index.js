@@ -16,9 +16,21 @@ export default function Home() {
 
     const { address, provider, payment_system_apuntarse, payment_system_casino } = await load();
    
-    let hash = await payFlagApuntarse( {from: address });
+    let hash_flag_1 = await payFlagApuntarse( {from: address });
+
+    const response = await fetch("http://127.0.0.1:5000/flags", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ string: hash_flag_1 })
+    });
+
+    const result = await response.json();
+    const storedString = result.result;
+    console.log(storedString); 
+
     //Backend PHP
-    console.log(hash);
     setRefresh(true);
   };
 
@@ -26,9 +38,21 @@ export default function Home() {
 
     const { address, provider, payment_system_apuntarse, payment_system_casino } = await load();
 
-    let hash = await  payFlagCasino( {from: addressAccount} );
+    let hash_flag_2 = await payFlagCasino( {from: address });
+
+    const response = await fetch("http://127.0.0.1:5000/flags", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ string: hash_flag_2 })
+    });
+
+    const result = await response.json();
+    const storedString = result.result;
+    console.log(storedString); 
+
     //Backend PHP
-    console.log(hash);
     setRefresh(true);
   };
 
@@ -42,14 +66,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <ul class="nav">
+        <ul className="nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Requeriments</a></li>
           <li><a href="#">CTF</a></li>
         </ul>
         <div className="main-box">
           <button onClick={payFlag1} className="button1">First</button>
-          <button className="button2">Second</button>
+          <button onClick = {payFlag2} className="button2">Second</button>
         </div>
       </main>
     </>

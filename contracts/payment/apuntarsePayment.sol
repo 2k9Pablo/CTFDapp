@@ -14,7 +14,7 @@ contract apuntarsePayment {
     constructor(apuntarseCoin _coin) public {
         owner = msg.sender;
         coin = _coin;
-        hashed_flag = "4567890p098765456a78s9fsijhgbsf";
+        hashed_flag = "df412cf499822853aa22a6d459b1a7caa926b3d24e57c98ddcab6041a60d0107";
 
     }
 

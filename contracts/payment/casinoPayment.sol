@@ -14,7 +14,7 @@ contract casinoPayment {
     constructor(casinoCoin _coin) {
         owner = msg.sender;
         coin = _coin;
-        hashed_flag = "234u78o97867564q32ewqdesfthy7ui6867";
+        hashed_flag = "f9bb8e8c330762612b5e8a4b09d985fea26e32696ab546082d4e3ef78452d886";
 
     }
 

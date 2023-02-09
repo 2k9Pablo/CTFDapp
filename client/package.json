@@ -12,6 +12,8 @@
     "@next/font": "13.1.6",
     "@truffle/contract": "^4.6.14",
     "next": "^13.1.6",
+    "pip": "^0.0.1",
+    "python": "^0.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "truffle": "^5.7.5",

@@ -14,7 +14,6 @@ export const load = async () => {
     const address = await loadAccount();
     //console.log(address);
     const { payment_system_apuntarse, payment_system_casino } = await loadContracts();
-    console.log(payment_system_apuntarse);
 
     return { address, provider, payment_system_apuntarse, payment_system_casino };
 
@@ -55,32 +54,33 @@ const loadAccount = async () => {
 
 const loadContracts = async () => {
     const {provider, address} = await loadGeneralInformation();
-    console.log(provider);
-    console.log(address);
+    
     const theApuntarsePayment = contract(apuntarsePayment);
     theApuntarsePayment.setProvider(provider);
     const payment_system_apuntarse = await theApuntarsePayment.deployed();
 
     const theCasinoPayment = contract(casinoPayment);
     theCasinoPayment.setProvider(provider);
-    const paymen_system_casino = await theCasinoPayment.deployed();
+    const payment_system_casino = await theCasinoPayment.deployed();
 
-    return { payment_system_apuntarse, paymen_system_casino };
+    return { payment_system_apuntarse, payment_system_casino };
 }
 
 export const payFlagApuntarse = async () => {
     const { payment_system_apuntarse } = await loadContracts();
     const { provider, address } = await loadGeneralInformation();
+
     await payment_system_apuntarse.pay_flag( {from: address });
     const hash = await payment_system_apuntarse.getFlagHash();
 
     return hash.toString();
 }
 
-const payFlagCasino = async () => {
-    const { paymen_system_casino } = await loadContracts();
+export const payFlagCasino = async () => {
+    const { payment_system_casino } = await loadContracts();
+    const { provider, address } = await loadGeneralInformation();
 
-    await paymen_system_casino.pay_flag( {from: address } );
+    await payment_system_casino.pay_flag( {from: address } );
     const hash = await payment_system_casino.getFlagHash();
     return hash.toString();
 }
