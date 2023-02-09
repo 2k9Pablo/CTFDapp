@@ -66,14 +66,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <ul className="nav">
-          <li><a href="#">Home</a></li>
+        <ul className={styles.nav}>
+          <li><a href="">Home</a></li>
           <li><a href="#">Requeriments</a></li>
           <li><a href="#">CTF</a></li>
         </ul>
-        <div className="main-box">
-          <button onClick={payFlag1} className="button1">First</button>
-          <button onClick = {payFlag2} className="button2">Second</button>
+        <div className={styles.mainBox}>
+          <button className={styles.button} onClick={payFlag1}>First</button>
+          <button className={styles.button} onClick = {payFlag2}>Second</button>
         </div>
       </main>
     </>
