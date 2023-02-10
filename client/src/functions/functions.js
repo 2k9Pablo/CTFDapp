@@ -19,7 +19,7 @@ export const load = async () => {
 
 }   
 
-const loadGeneralInformation = async () => {
+export const loadGeneralInformation = async () => {
     const provider = await loadWeb3();
     //console.log(provider);
     const address = await loadAccount();
@@ -27,7 +27,7 @@ const loadGeneralInformation = async () => {
     return {provider, address};
 }
 
-const loadWeb3 = async () => {
+export const loadWeb3 = async () => {
 
     if (window.ethereum) {
         window.web3 = new Web3(window.ethereum)
@@ -40,7 +40,7 @@ const loadWeb3 = async () => {
         console.log('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
 
-    const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+    const web3 = new Web3(window.web3);
 
     return web3.currentProvider;
 };

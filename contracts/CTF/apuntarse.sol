@@ -8,12 +8,10 @@ import "../tokens/apuntarseCoin.sol";
 contract apuntarse {
 
     //Requerimos que el contrato este desbloqueado para apuntarse
-    //Variables de mierda para no overwritear
     bool lock = false;
     address private trash;
     uint8 n_participantes;
 
-    //Important variables
     address public owner;
     apuntarseCoin public coin;
     

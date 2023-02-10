@@ -2,9 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import { load, payFlagApuntarse, payFlagCasino } from '../functions/functions';
+import { load, payFlagApuntarse, payFlagCasino, loadGeneralInformation } from '../functions/functions';
 import React, { useState, useEffect } from 'react';
 
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,50 +13,15 @@ export default function Home() {
 
   const [refresh, setRefresh] = useState(true);
 
-  const payFlag1 = async () => {
+  const checkConnection = async () => {
 
-    const { address, provider, payment_system_apuntarse, payment_system_casino } = await load();
-   
-    let hash_flag_1 = await payFlagApuntarse( {from: address });
-
-    const response = await fetch("http://127.0.0.1:5000/flags", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ string: hash_flag_1 })
-    });
-
-    const result = await response.json();
-    const storedString = result.result;
-    console.log(storedString); 
-
-    //Backend PHP
+    const { address, provider } = await loadGeneralInformation();
+    console.log("Using address: ", address);
+    console.log("Using provider: ", provider);
     setRefresh(true);
+  
   };
-
-  const payFlag2 = async () => {
-
-    const { address, provider, payment_system_apuntarse, payment_system_casino } = await load();
-
-    let hash_flag_2 = await payFlagCasino( {from: address });
-
-    const response = await fetch("http://127.0.0.1:5000/flags", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ string: hash_flag_2 })
-    });
-
-    const result = await response.json();
-    const storedString = result.result;
-    console.log(storedString); 
-
-    //Backend PHP
-    setRefresh(true);
-  };
-
+  
 
   return (
     <>
@@ -67,13 +33,48 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <ul className={styles.nav}>
-          <li><a href="">Home</a></li>
+        <li><Link href="/">Home</Link></li>
           <li><a href="#">Requeriments</a></li>
-          <li><a href="#">CTF</a></li>
+          <li><Link href="/payment/payment_system">Payment</Link></li>
+          <li><Link href="/code/apuntarseCode">Contrac Apuntarse</Link></li>
+          <li><Link href="/code/casinoCode">Contract Casino</Link></li>
+          <li><Link href="/documentation/truffle-doc">Truffle Help</Link></li>
+
         </ul>
+        <div>
+          <h1>HackOn CTF</h1>
+          <div>Bienvenido al reto Blockchain del CTF HackOn</div>
+
+          <div>Mucha suerte con los retos! ^^</div>
+          <br />
+        
+          <hr />
+          <br />
+
+          <h2>Requisitos</h2>
+          <ul>
+          <br />
+          
+          <h3>Metamask</h3>
+          <div>Para poder realizar los retos, es necesario tener instalada la extensión Metamask</div>
+          <br />
+          
+          <h3>Goerli</h3>
+          <div>Deberemos tener metamask conectado a la testnet "Goerli"</div>
+          <div>ChainID: 5</div>
+          <br />
+ 
+          <h4>Como conectar</h4>
+          <ul>
+            <li>En la parte superior derecha, encontramos un circulo que nos da acceso a la selección de cuentas:</li>
+            <li>Vamos a configuración - Avanzando - Mostrar redes de prueba (mitad scroll)</li>
+          </ul>
+            <div>Seleccionamos Goerli y listo!</div>
+          </ul>
+          
+        </div>
         <div className={styles.mainBox}>
-          <button className={styles.button} onClick={payFlag1}>First</button>
-          <button className={styles.button} onClick = {payFlag2}>Second</button>
+          <button className={styles.button} onClick={checkConnection}>Check Connection</button>
         </div>
       </main>
     </>

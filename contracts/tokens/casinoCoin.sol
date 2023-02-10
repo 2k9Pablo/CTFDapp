@@ -1,14 +1,11 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: AFL-3.0
 
 pragma solidity >=0.8.13;
 
-// This is just a simple example of a coin-like contract.
-// It is not ERC20 compatible and cannot be expected to talk to other
-// coin/token contracts.
+//Simple Coin like contract to reward the players
 
 contract casinoCoin {
 
-	//Atributos del token
 	string private name;
     string private symbol;
     uint8 private decimals;

@@ -6,10 +6,10 @@ import "../tokens/casinoCoin.sol";
 
 contract casino {
 
-    //Variable declaration
     address public owner;
     casinoCoin public coin;
     bytes32 public seed;
+
     mapping(address => bool) participantes;
     mapping(address => uint256) consecutive_wins;
     mapping(address => uint256) funds;
@@ -51,7 +51,6 @@ contract casino {
         
     }
     
-    //Exploit Pseudorandomness
     function lotto(uint256 _guess) public {
         uint256 num = uint256(keccak256(abi.encodePacked("Pseudo_are_safu")));
         if (_guess == num) {
@@ -70,9 +69,6 @@ contract casino {
         return true;
     }
 
-    ///////////
-
-    //Functionality
     function addFunds() public {
         funds[msg.sender] += 100;
     }
@@ -87,7 +83,6 @@ contract casino {
     
     }
 
-    //tx.origin
     function retrieveFunds(uint256 _funds) external returns (bool){
         
         require((funds[tx.origin] -= _funds) >= 0, "No tienes suficientes fondos");

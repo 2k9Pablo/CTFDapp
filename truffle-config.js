@@ -42,9 +42,10 @@
  */
 
 // require('dotenv').config();
-// const { MNEMONIC, PROJECT_ID } = process.env;
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const mnemonic = "sauce minor room matter fault tragic feed disorder park fish carbon vacant";
+const INFURA_API_KEY = '221974c4edc64649a2dc53db07db0954';
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 module.exports = {
   /**
@@ -83,13 +84,14 @@ module.exports = {
     //
     // Useful for deploying to a public network.
     // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
-    // goerli: {
-    //   provider: () => new HDWalletProvider(MNEMONIC, `https://goerli.infura.io/v3/${PROJECT_ID}`),
-    //   network_id: 5,       // Goerli's id
-    //   confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
-    //   timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    //   skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    // },
+  goerli: {
+    provider: new HDWalletProvider(mnemonic, "https://goerli.infura.io/v3/221974c4edc64649a2dc53db07db0954", 0),
+
+
+    network_id: '5', // eslint-disable-line camelcase
+    gas: 4465030,
+    gasPrice: 10000000000,
+  },
     //
     // Useful for private networks
     // private: {
