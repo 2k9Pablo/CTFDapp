@@ -43,7 +43,7 @@
 
 // require('dotenv').config();
 
-const mnemonic = "sauce minor room matter fault tragic feed disorder park fish carbon vacant";
+const mnemonic = "frozen wrap filter tattoo drift scare sick differ mention admit trade toast";
 const INFURA_API_KEY = '221974c4edc64649a2dc53db07db0954';
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 

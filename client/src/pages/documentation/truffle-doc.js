@@ -27,7 +27,7 @@ export default function truffleDocumentation () {
                 <h1>Truffle documentation</h1>
                 <br />
 
-                <div>Como interactuar con los contratos utilizando web3 & truffle/contracts</div>
+                <div>Como interactuar con los contratos utilizando web3 & truffle/hdwallet-provider</div>
                 
                 <br />
                 <br />
@@ -37,11 +37,21 @@ export default function truffleDocumentation () {
 
                 
                     <h2>Start the project</h2>
-                    <div>En primer lugar, deberemos crear un carpeta y abrirla mediante un VSCode</div>
                     <br />
 
+                    <div>En primer lugar, deberemos crear un carpeta y abrirla mediante un VSCode</div>
+                    <br />
+                    <br />
+
+
                     <h2>Dependencies</h2>
-                    <div>Se necesita tener node.js</div>
+                    <br />
+
+                    <div>Se necesita tener node.js y una cuenta en algun proveedor de endpoints</div>
+                    <br />
+
+                    <div>Se recomienda tener git para utilizar la gitbash</div>
+
                      <br />
                         
                         <h3>Truffle</h3>
@@ -49,10 +59,42 @@ export default function truffleDocumentation () {
                                 <code>
                                     {`
                                         npm i truffle@latest
-                                        npm i @truffle/contract
+                                        npm i @truffle/hdwallet-provider
+                                        truffle init 
                                     `}
                                 </code>
                             </pre>
+                            <br />
+
+                            <div>Deberemos modificar truffle-config.js</div>
+                            <br />
+                            <div>Configuración de ejemplo: </div>
+                            <br />
+
+                            <pre>
+                                <code>
+                                    {`
+                                        const mnemonic = "YOUR_MNEMONIC_PHRASE"; 
+                                        const INFURA_API_KEY = 'YOUR_API_KEY';
+                                        const HDWalletProvider = require("@truffle/hdwallet-provider");
+                                        
+                                        module.exports = {
+                                        
+                                          networks: {
+                                            goerli: {
+                                              provider: new HDWalletProvider(mnemonic, "https://goerli.infura.io/v3/" + INFURA_API_KEY, 0),
+                                        
+                                        
+                                              network_id: '5', // eslint-disable-line camelcase
+                                              gas: 4465030,
+                                              gasPrice: 10000000000,
+                                            },
+                                            
+                                          },
+                                    `}
+                                </code>
+                            </pre>
+
 
                         <br />
                         <hr />
@@ -72,10 +114,12 @@ export default function truffleDocumentation () {
                         <br />
                         
                         <h3>Connection to an endpoint</h3>
+                        <br />
+
                             <div>Para poder interactuar con la cadena, necesitamos tener conexión con un endpoint de la misma.</div>
                             <div>Algunos ejemplos</div>
                             <ul>
-                                <li>https://goerli.infura.io/v3/YOUR-PROJECT-ID de Infura</li>
+                                <li>https://goerli.infura.io/v3/YOUR_API_KEY de Infura</li>
                                 <li>https://rpc.ankr.com/eth_goerli de Ankr</li>
                             </ul>
 
@@ -95,49 +139,38 @@ export default function truffleDocumentation () {
                             <pre>
                                 <code>
                                     {`
-                                        //Importamos la lib web3
-                                        const Web3 = require('web3');
+                                        const HDWalletProvider = require("@truffle/hdwallet-provider");
+                                        const Web3 = require("web3");
                                         
-                                        //Importamos la lib truffle/contract
-                                        const contract = require('@truffle/contract');
+                                        const contractABI = require("../build/contracts/balance.json").abi;
+                                        const contractAdd = "0x...";
                                         
-                                        //Establecemos nuestro endpoint como proveedor, por ejemplo Infura
-                                        const web3 = new Web3(new Web3.providers.HttpProvider('*https://goerli.infura.io/v3/YOUR-PROJECT-ID'));
-                                        
-                                        //Importamos la ABI del contrato en formato JSON
-                                        const contractABI = require('balance.json');
-                                        
-                                        //Creamos una variable para guardar el proveedor
-                                        const provider = web3.currentProvider;
-                                        
-                                        //Creamos una variable para guardar nuestra dirección de cartera 
-                                        const address = "Tu dirección de cartera";
-                                        
-                                        //Creamos la función asíncrona para interactuar con el contrato
-                                        async function checkBalance() {
-                                            
-                                            //Llamada a la funcion contract() de truffle/contract
-                                            const theContract = contract(contractABI);
+                                        const provider = new HDWalletProvider("YOUR_MNEMONIC_PHRASE", "https://goerli.infura.io/v3/" + "YOUR_API_KEY", 0)
+                                        const web3 = new Web3(provider);
 
-                                            //Establecemos el provider de la instancia
-                                            theContract.setProvider(provider);
+                                        async function main() {
+                                        
+                                            const contract = new web3.eth.Contract(contractABI, "0xa9e385C6E9bE69d1353D05AcA837DadB7EB2ea56");
+                                        
+                                            const signer = await web3.eth.getAccounts();
+                                        
+                                            await contract.methods.method_name().call({from: signer[0], gas: 4500000, gasPrice:10000000000 });
 
-                                            //Comprobamos que se encuentre en la red
-                                            const balance = await theContract.deployed();
-                                            
-                                            //Creamos una variable value que recibe la llamada de la función al contrato
-                                            let value = await balance.getBalance();
-
-                                            //Lo imprimimos
-                                            console.log(value.toNumber());
                                         }
-
-                                        //Llamamos a la función asíncrona
-                                        checkBalance();
+                                        
+                                        main();
                                     `}
                                 </code>
                             </pre>
-                        
+                            <br />
+
+                            <h4>IMPORTANTE</h4>
+                            <div>.send se utiliza para las funciones que modifican el estado del contrato</div>
+                            <br />
+
+                            <div>.call se utiliza para las funciones que no modifican el estado del contrato</div>
+
+
                         <br />
                         <hr />
                         <br />
@@ -166,7 +199,7 @@ export default function truffleDocumentation () {
                         <hr />
                         <br />
                         
-                        <h4>Llamada al script</h4>
+                        <h3>Llamada al script</h3>
                             <pre>
                                 <code>
                                     {`
@@ -174,17 +207,21 @@ export default function truffleDocumentation () {
                                     `}
                                 </code>
                             </pre>
+
+                        <h3>Output</h3>
+                            <pre>
+                                <code>
+                                    {`
+                                        node interact
+                                        1000
+                                    `}
+                                </code>
+                            </pre>
                 
                 
                 <br />
             </div>
-            <pre>
-                <code>
-                    {`
-                    
-                    `}
-                </code>
-            </pre>
+            
     </main>
         </>
 

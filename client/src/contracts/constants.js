@@ -7,19 +7,19 @@ import abiCasinoCoin from "@/contracts/casinoCoin.json";
 import abiCasinoPayment from "@/contracts/casinoPayment.json";
 
 export const apuntarseABI = abiApuntarse;
-export const apuntarseAddress = "0xecAD813FED7C33Be7F3a2523dD2d79ADfdea66f7";
+export const apuntarseAddress = "0xe5BF0102f0a20f3b0675A417E484973e216754D6";
 
 export const apuntarseCoinABI = abiApuntarseCoin;
-export const apuntarseCoinAddress = "0x32FD3d3f37Da93E1487A2Bd1E28048157EA5A83e";
+export const apuntarseCoinAddress = "0x4C334CeFf2ecEC1fc7ceFd4a48A9AC534249ffC6";
 
 export const apuntarsePaymentABI = abiApuntarsePayment;
-export const apuntarsePaymentAddress = "0x2279A5f7107fF5e4b2f97356c673471E1bc5476b";
+export const apuntarsePaymentAddress = "0x7Aa19D9b8A85070398AF3dCd3f9F2EC7F5fCd017";
 
 export const casinoABI = abiCasino;
-export const casinoAddress = "0xdef252f192F8b28EdCd235558F98AD75dD0f6cd9";
+export const casinoAddress = "0x52f40D77eFf9950580411720E1F7C93ADdbC0D45";
 
 export const casinoCoinABI = abiCasinoCoin;
-export const casinoCoinAddress = "0x2A2486B8fd134d2279682625Ae3741921f1E08d1";
+export const casinoCoinAddress = "0xe9F1680fF7b7Bf3B306b5B470175E3744Fd3d833";
 
 export const casinoPaymentABI = abiCasinoPayment;
-export const casinoPaymentAddress = "0xaD853Db994b16280BB12b135b2bB32113ac29E1F";
+export const casinoPaymentAddress = "0x0B9ba7fcc0A16bAc7c56577499eeb1dA80aa45c0";

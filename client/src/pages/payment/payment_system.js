@@ -68,10 +68,8 @@ export default function paymentButtons() {
       <main className={payment_styles.main}>
         <ul className={styles.nav}>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/payment/payment_system">Payment</Link></li>
           <li><Link href="/code/apuntarseCode">Contrac Apuntarse</Link></li>
           <li><Link href="/code/casinoCode">Contract Casino</Link></li>
-          <li><Link href="/documentation/truffle-doc">Truffle Help</Link></li>
           <li><Link href="/documentation/truffle-doc">Truffle Help</Link></li>
 
 

@@ -19,8 +19,8 @@ contract casinoPayment {
     }
 
     function pay_flag() public {
-        require(coin.balanceOf(msg.sender) >= 1, "U broke");
-        coin.payCoins(msg.sender, 1);
+        require(coin.balanceOf(msg.sender) >= 2, "U broke");
+        coin.payCoins(msg.sender, 2);
 
         winners[msg.sender] = true;
     }

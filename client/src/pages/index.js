@@ -41,9 +41,16 @@ export default function Home() {
           <li><Link href="/documentation/truffle-doc">Truffle Help</Link></li>
 
         </ul>
+
+        <br />
+        <br />
+
         <div>
           <h1>HackOn CTF</h1>
+          <br />
+
           <div>Bienvenido al reto Blockchain del CTF HackOn</div>
+          <br />
 
           <div>Mucha suerte con los retos! ^^</div>
           <br />
@@ -56,15 +63,25 @@ export default function Home() {
           <br />
           
           <h3>Metamask</h3>
+          <br />
+
           <div>Para poder realizar los retos, es necesario tener instalada la extensión Metamask</div>
           <br />
           
           <h3>Goerli</h3>
+          <br />
+
           <div>Deberemos tener metamask conectado a la testnet "Goerli"</div>
-          <div>ChainID: 5</div>
+
+          <ul>
+            <li>ChainID: 5</li>
+            
+          </ul>          
           <br />
  
           <h4>Como conectar</h4>
+          <br />
+
           <ul>
             <li>En la parte superior derecha, encontramos un circulo que nos da acceso a la selección de cuentas:</li>
             <li>Vamos a configuración - Avanzando - Mostrar redes de prueba (mitad scroll)</li>
