@@ -23,8 +23,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -37,8 +36,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -51,8 +49,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -184,8 +181,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -198,8 +194,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -212,8 +207,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -226,8 +220,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -524,7 +517,7 @@
                 }
               ]
             },
-            "name": "cleanup_t_contract$_casinoCoin_$802",
+            "name": "cleanup_t_contract$_casinoCoin_$821",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -603,7 +596,7 @@
                               }
                             ],
                             "functionName": {
-                              "name": "cleanup_t_contract$_casinoCoin_$802",
+                              "name": "cleanup_t_contract$_casinoCoin_$821",
                               "nodeType": "YulIdentifier",
                               "src": "779:35:4"
                             },
@@ -633,7 +626,7 @@
                 }
               ]
             },
-            "name": "validator_revert_t_contract$_casinoCoin_$802",
+            "name": "validator_revert_t_contract$_casinoCoin_$821",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -687,7 +680,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "validator_revert_t_contract$_casinoCoin_$802",
+                      "name": "validator_revert_t_contract$_casinoCoin_$821",
                       "nodeType": "YulIdentifier",
                       "src": "974:44:4"
                     },
@@ -699,7 +692,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_contract$_casinoCoin_$802_fromMemory",
+            "name": "abi_decode_t_contract$_casinoCoin_$821_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -849,7 +842,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_decode_t_contract$_casinoCoin_$802_fromMemory",
+                          "name": "abi_decode_t_contract$_casinoCoin_$821_fromMemory",
                           "nodeType": "YulIdentifier",
                           "src": "1325:49:4"
                         },
@@ -868,7 +861,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_contract$_casinoCoin_$802_fromMemory",
+            "name": "abi_decode_tuple_t_contract$_casinoCoin_$821_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -896,7 +889,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_contract$_casinoCoin_$802(value) -> cleaned {\n        cleaned := cleanup_t_address(value)\n    }\n\n    function validator_revert_t_contract$_casinoCoin_$802(value) {\n        if iszero(eq(value, cleanup_t_contract$_casinoCoin_$802(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_contract$_casinoCoin_$802_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_contract$_casinoCoin_$802(value)\n    }\n\n    function abi_decode_tuple_t_contract$_casinoCoin_$802_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_contract$_casinoCoin_$802_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n}\n",
+      "contents": "{\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_contract$_casinoCoin_$821(value) -> cleaned {\n        cleaned := cleanup_t_address(value)\n    }\n\n    function validator_revert_t_contract$_casinoCoin_$821(value) {\n        if iszero(eq(value, cleanup_t_contract$_casinoCoin_$821(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_contract$_casinoCoin_$821_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_contract$_casinoCoin_$821(value)\n    }\n\n    function abi_decode_tuple_t_contract$_casinoCoin_$821_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_contract$_casinoCoin_$821_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n}\n",
       "id": 4,
       "language": "Yul",
       "name": "#utility.yul"
@@ -1176,7 +1169,7 @@
                 }
               ]
             },
-            "name": "convert_t_contract$_casinoCoin_$802_to_t_address",
+            "name": "convert_t_contract$_casinoCoin_$821_to_t_address",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -1218,7 +1211,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "convert_t_contract$_casinoCoin_$802_to_t_address",
+                          "name": "convert_t_contract$_casinoCoin_$821_to_t_address",
                           "nodeType": "YulIdentifier",
                           "src": "740:48:4"
                         },
@@ -1239,7 +1232,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_contract$_casinoCoin_$802_to_t_address_fromStack",
+            "name": "abi_encode_t_contract$_casinoCoin_$821_to_t_address_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -1329,7 +1322,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_contract$_casinoCoin_$802_to_t_address_fromStack",
+                      "name": "abi_encode_t_contract$_casinoCoin_$821_to_t_address_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "970:61:4"
                     },
@@ -1341,7 +1334,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_contract$_casinoCoin_$802__to_t_address__fromStack_reversed",
+            "name": "abi_encode_tuple_t_contract$_casinoCoin_$821__to_t_address__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -7761,7 +7754,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function identity(value) -> ret {\n        ret := value\n    }\n\n    function convert_t_uint160_to_t_uint160(value) -> converted {\n        converted := cleanup_t_uint160(identity(cleanup_t_uint160(value)))\n    }\n\n    function convert_t_uint160_to_t_address(value) -> converted {\n        converted := convert_t_uint160_to_t_uint160(value)\n    }\n\n    function convert_t_contract$_casinoCoin_$802_to_t_address(value) -> converted {\n        converted := convert_t_uint160_to_t_address(value)\n    }\n\n    function abi_encode_t_contract$_casinoCoin_$802_to_t_address_fromStack(value, pos) {\n        mstore(pos, convert_t_contract$_casinoCoin_$802_to_t_address(value))\n    }\n\n    function abi_encode_tuple_t_contract$_casinoCoin_$802__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_contract$_casinoCoin_$802_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint8(value) -> cleaned {\n        cleaned := and(value, 0xff)\n    }\n\n    function validator_revert_t_uint8(value) {\n        if iszero(eq(value, cleanup_t_uint8(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint8(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint8(value)\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint8t_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint8(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_bytes32(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_bytes32_to_t_bytes32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bytes32(value))\n    }\n\n    function abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bytes32_to_t_bytes32_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function leftAlign_t_uint256(value) -> aligned {\n        aligned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_nonPadded_inplace_fromStack(value, pos) {\n        mstore(pos, leftAlign_t_uint256(cleanup_t_uint256(value)))\n    }\n\n    function abi_encode_tuple_packed_t_uint256__to_t_uint256__nonPadded_inplace_fromStack_reversed(pos , value0) -> end {\n\n        abi_encode_t_uint256_to_t_uint256_nonPadded_inplace_fromStack(value0,  pos)\n        pos := add(pos, 32)\n\n        end := pos\n    }\n\n    function panic_error_0x12() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x12)\n        revert(0, 0x24)\n    }\n\n    function mod_t_uint256(x, y) -> r {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        if iszero(y) { panic_error_0x12() }\n        r := mod(x, y)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function store_literal_in_memory_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8(memPtr) {\n\n        mstore(add(memPtr, 0), \"Los dados solo tienen 6 numeros\")\n\n    }\n\n    function abi_encode_t_stringliteral_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 31)\n        store_literal_in_memory_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function checked_mul_t_uint256(x, y) -> product {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        let product_raw := mul(x, y)\n        product := cleanup_t_uint256(product_raw)\n\n        // overflow, if x != 0 and y != product/x\n        if iszero(\n            or(\n                iszero(x),\n                eq(y, div(product, x))\n            )\n        ) { panic_error_0x11() }\n\n    }\n\n    function checked_add_t_uint256(x, y) -> sum {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        sum := add(x, y)\n\n        if gt(x, sum) { panic_error_0x11() }\n\n    }\n\n    function checked_sub_t_uint256(x, y) -> diff {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        diff := sub(x, y)\n\n        if gt(diff, x) { panic_error_0x11() }\n\n    }\n\n    function store_literal_in_memory_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1(memPtr) {\n\n        mstore(add(memPtr, 0), \"No tienes suficientes fondos\")\n\n    }\n\n    function abi_encode_t_stringliteral_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 28)\n        store_literal_in_memory_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5(memPtr) {\n\n        mstore(add(memPtr, 0), \"2\")\n\n    }\n\n    function abi_encode_t_stringliteral_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 1)\n        store_literal_in_memory_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function validator_revert_t_bool(value) {\n        if iszero(eq(value, cleanup_t_bool(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_bool_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_bool(value)\n    }\n\n    function abi_decode_tuple_t_bool_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bool_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function store_literal_in_memory_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10(memPtr) {\n\n        mstore(add(memPtr, 0), \"No has ganado las suficientes pa\")\n\n        mstore(add(memPtr, 32), \"rtidas\")\n\n    }\n\n    function abi_encode_t_stringliteral_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 38)\n        store_literal_in_memory_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba(memPtr) {\n\n        mstore(add(memPtr, 0), \"No estas registrado\")\n\n    }\n\n    function abi_encode_t_stringliteral_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 19)\n        store_literal_in_memory_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function cleanup_t_rational_1_by_1(value) -> cleaned {\n        cleaned := value\n    }\n\n    function convert_t_rational_1_by_1_to_t_uint256(value) -> converted {\n        converted := cleanup_t_uint256(identity(cleanup_t_rational_1_by_1(value)))\n    }\n\n    function abi_encode_t_rational_1_by_1_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, convert_t_rational_1_by_1_to_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address_t_rational_1_by_1__to_t_address_t_uint256__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_rational_1_by_1_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, length) -> updated_pos {\n        updated_pos := pos\n    }\n\n    function store_literal_in_memory_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2(memPtr) {\n\n        mstore(add(memPtr, 0), \"Pseudo_are_safu\")\n\n    }\n\n    function abi_encode_t_stringliteral_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2_to_t_string_memory_ptr_nonPadded_inplace_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, 15)\n        store_literal_in_memory_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2(pos)\n        end := add(pos, 15)\n    }\n\n    function abi_encode_tuple_packed_t_stringliteral_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos ) -> end {\n\n        pos := abi_encode_t_stringliteral_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2_to_t_string_memory_ptr_nonPadded_inplace_fromStack( pos)\n\n        end := pos\n    }\n\n    function store_literal_in_memory_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd(memPtr) {\n\n        mstore(add(memPtr, 0), \"No la retirada solo es autorizad\")\n\n        mstore(add(memPtr, 32), \"a por el casino\")\n\n    }\n\n    function abi_encode_t_stringliteral_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 47)\n        store_literal_in_memory_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n}\n",
+      "contents": "{\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function identity(value) -> ret {\n        ret := value\n    }\n\n    function convert_t_uint160_to_t_uint160(value) -> converted {\n        converted := cleanup_t_uint160(identity(cleanup_t_uint160(value)))\n    }\n\n    function convert_t_uint160_to_t_address(value) -> converted {\n        converted := convert_t_uint160_to_t_uint160(value)\n    }\n\n    function convert_t_contract$_casinoCoin_$821_to_t_address(value) -> converted {\n        converted := convert_t_uint160_to_t_address(value)\n    }\n\n    function abi_encode_t_contract$_casinoCoin_$821_to_t_address_fromStack(value, pos) {\n        mstore(pos, convert_t_contract$_casinoCoin_$821_to_t_address(value))\n    }\n\n    function abi_encode_tuple_t_contract$_casinoCoin_$821__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_contract$_casinoCoin_$821_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function cleanup_t_uint8(value) -> cleaned {\n        cleaned := and(value, 0xff)\n    }\n\n    function validator_revert_t_uint8(value) {\n        if iszero(eq(value, cleanup_t_uint8(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint8(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint8(value)\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint8t_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint8(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function cleanup_t_bytes32(value) -> cleaned {\n        cleaned := value\n    }\n\n    function abi_encode_t_bytes32_to_t_bytes32_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bytes32(value))\n    }\n\n    function abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bytes32_to_t_bytes32_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function leftAlign_t_uint256(value) -> aligned {\n        aligned := value\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_nonPadded_inplace_fromStack(value, pos) {\n        mstore(pos, leftAlign_t_uint256(cleanup_t_uint256(value)))\n    }\n\n    function abi_encode_tuple_packed_t_uint256__to_t_uint256__nonPadded_inplace_fromStack_reversed(pos , value0) -> end {\n\n        abi_encode_t_uint256_to_t_uint256_nonPadded_inplace_fromStack(value0,  pos)\n        pos := add(pos, 32)\n\n        end := pos\n    }\n\n    function panic_error_0x12() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x12)\n        revert(0, 0x24)\n    }\n\n    function mod_t_uint256(x, y) -> r {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        if iszero(y) { panic_error_0x12() }\n        r := mod(x, y)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function store_literal_in_memory_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8(memPtr) {\n\n        mstore(add(memPtr, 0), \"Los dados solo tienen 6 numeros\")\n\n    }\n\n    function abi_encode_t_stringliteral_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 31)\n        store_literal_in_memory_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_8b9df02d3f1c44fd8375b3f5c053ceac3764a37b9bf3498883fabf8f559b17c8_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function checked_mul_t_uint256(x, y) -> product {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        let product_raw := mul(x, y)\n        product := cleanup_t_uint256(product_raw)\n\n        // overflow, if x != 0 and y != product/x\n        if iszero(\n            or(\n                iszero(x),\n                eq(y, div(product, x))\n            )\n        ) { panic_error_0x11() }\n\n    }\n\n    function checked_add_t_uint256(x, y) -> sum {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        sum := add(x, y)\n\n        if gt(x, sum) { panic_error_0x11() }\n\n    }\n\n    function checked_sub_t_uint256(x, y) -> diff {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n        diff := sub(x, y)\n\n        if gt(diff, x) { panic_error_0x11() }\n\n    }\n\n    function store_literal_in_memory_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1(memPtr) {\n\n        mstore(add(memPtr, 0), \"No tienes suficientes fondos\")\n\n    }\n\n    function abi_encode_t_stringliteral_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 28)\n        store_literal_in_memory_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_831940156d16a0129eaf3cec9176ed943e8bc204790037bfb8b5afe2a282d0e1_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5(memPtr) {\n\n        mstore(add(memPtr, 0), \"2\")\n\n    }\n\n    function abi_encode_t_stringliteral_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 1)\n        store_literal_in_memory_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ad7c5bef027816a800da1736444fb58a807ef4c9603b7848673f7e3a68eb14a5_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function validator_revert_t_bool(value) {\n        if iszero(eq(value, cleanup_t_bool(value))) { revert(0, 0) }\n    }\n\n    function abi_decode_t_bool_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_bool(value)\n    }\n\n    function abi_decode_tuple_t_bool_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bool_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function store_literal_in_memory_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10(memPtr) {\n\n        mstore(add(memPtr, 0), \"No has ganado las suficientes pa\")\n\n        mstore(add(memPtr, 32), \"rtidas\")\n\n    }\n\n    function abi_encode_t_stringliteral_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 38)\n        store_literal_in_memory_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_def84a5430d610871c9661aa729242a96459e08faefa42b3b54709f007321d10_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function store_literal_in_memory_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba(memPtr) {\n\n        mstore(add(memPtr, 0), \"No estas registrado\")\n\n    }\n\n    function abi_encode_t_stringliteral_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 19)\n        store_literal_in_memory_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_tuple_t_stringliteral_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_1ae2be31ae468fbdbc814e1fd24e9ece6f62cf46bcb79688ff74f59a86359bba_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function cleanup_t_rational_1_by_1(value) -> cleaned {\n        cleaned := value\n    }\n\n    function convert_t_rational_1_by_1_to_t_uint256(value) -> converted {\n        converted := cleanup_t_uint256(identity(cleanup_t_rational_1_by_1(value)))\n    }\n\n    function abi_encode_t_rational_1_by_1_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, convert_t_rational_1_by_1_to_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address_t_rational_1_by_1__to_t_address_t_uint256__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_rational_1_by_1_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, length) -> updated_pos {\n        updated_pos := pos\n    }\n\n    function store_literal_in_memory_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2(memPtr) {\n\n        mstore(add(memPtr, 0), \"Pseudo_are_safu\")\n\n    }\n\n    function abi_encode_t_stringliteral_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2_to_t_string_memory_ptr_nonPadded_inplace_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_nonPadded_inplace_fromStack(pos, 15)\n        store_literal_in_memory_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2(pos)\n        end := add(pos, 15)\n    }\n\n    function abi_encode_tuple_packed_t_stringliteral_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos ) -> end {\n\n        pos := abi_encode_t_stringliteral_5304e3777d25c9f43b9dc5c8ebb5f2d7f80da15e74e48810f2965c6636b2fee2_to_t_string_memory_ptr_nonPadded_inplace_fromStack( pos)\n\n        end := pos\n    }\n\n    function store_literal_in_memory_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd(memPtr) {\n\n        mstore(add(memPtr, 0), \"No la retirada solo es autorizad\")\n\n        mstore(add(memPtr, 32), \"a por el casino\")\n\n    }\n\n    function abi_encode_t_stringliteral_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 47)\n        store_literal_in_memory_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_stringliteral_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_e62aaa4552787e8c6319a018a4e737c367b3610b5a6e7f154f8f9201b4c577fd_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n}\n",
       "id": 4,
       "language": "Yul",
       "name": "#utility.yul"
@@ -7778,7 +7771,7 @@
         391
       ],
       "casinoCoin": [
-        802
+        821
       ]
     },
     "id": 392,
@@ -7803,7 +7796,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 392,
-        "sourceUnit": 803,
+        "sourceUnit": 822,
         "src": "66:34:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7865,7 +7858,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_casinoCoin_$802",
+              "typeIdentifier": "t_contract$_casinoCoin_$821",
               "typeString": "contract casinoCoin"
             },
             "typeName": {
@@ -7878,13 +7871,13 @@
                   "156:10:0"
                 ],
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 802,
+                "referencedDeclaration": 821,
                 "src": "156:10:0"
               },
-              "referencedDeclaration": 802,
+              "referencedDeclaration": 821,
               "src": "156:10:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_casinoCoin_$802",
+                "typeIdentifier": "t_contract$_casinoCoin_$821",
                 "typeString": "contract casinoCoin"
               }
             },
@@ -8281,7 +8274,7 @@
                       "referencedDeclaration": 7,
                       "src": "509:4:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_casinoCoin_$802",
+                        "typeIdentifier": "t_contract$_casinoCoin_$821",
                         "typeString": "contract casinoCoin"
                       }
                     },
@@ -8295,13 +8288,13 @@
                       "referencedDeclaration": 24,
                       "src": "516:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_casinoCoin_$802",
+                        "typeIdentifier": "t_contract$_casinoCoin_$821",
                         "typeString": "contract casinoCoin"
                       }
                     },
                     "src": "509:12:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_casinoCoin_$802",
+                      "typeIdentifier": "t_contract$_casinoCoin_$821",
                       "typeString": "contract casinoCoin"
                     }
                   },
@@ -8322,7 +8315,7 @@
                         "referencedDeclaration": 7,
                         "src": "532:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_casinoCoin_$802",
+                          "typeIdentifier": "t_contract$_casinoCoin_$821",
                           "typeString": "contract casinoCoin"
                         }
                       },
@@ -8334,7 +8327,7 @@
                       "memberLocation": "537:4:0",
                       "memberName": "mint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 801,
+                      "referencedDeclaration": 820,
                       "src": "532:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
@@ -8386,7 +8379,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_casinoCoin_$802",
+                    "typeIdentifier": "t_contract$_casinoCoin_$821",
                     "typeString": "contract casinoCoin"
                   },
                   "typeName": {
@@ -8399,13 +8392,13 @@
                         "363:10:0"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 802,
+                      "referencedDeclaration": 821,
                       "src": "363:10:0"
                     },
-                    "referencedDeclaration": 802,
+                    "referencedDeclaration": 821,
                     "src": "363:10:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_casinoCoin_$802",
+                      "typeIdentifier": "t_contract$_casinoCoin_$821",
                       "typeString": "contract casinoCoin"
                     }
                   },
@@ -10587,7 +10580,7 @@
                         "referencedDeclaration": 7,
                         "src": "1837:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_casinoCoin_$802",
+                          "typeIdentifier": "t_contract$_casinoCoin_$821",
                           "typeString": "contract casinoCoin"
                         }
                       },
@@ -10599,7 +10592,7 @@
                       "memberLocation": "1842:8:0",
                       "memberName": "sendCoin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 717,
+                      "referencedDeclaration": 736,
                       "src": "1837:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -11882,7 +11875,7 @@
                         "referencedDeclaration": 7,
                         "src": "2590:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_casinoCoin_$802",
+                          "typeIdentifier": "t_contract$_casinoCoin_$821",
                           "typeString": "contract casinoCoin"
                         }
                       },
@@ -11894,7 +11887,7 @@
                       "memberLocation": "2595:8:0",
                       "memberName": "sendCoin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 717,
+                      "referencedDeclaration": 736,
                       "src": "2590:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -12278,7 +12271,7 @@
                         "referencedDeclaration": 7,
                         "src": "2901:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_casinoCoin_$802",
+                          "typeIdentifier": "t_contract$_casinoCoin_$821",
                           "typeString": "contract casinoCoin"
                         }
                       },
@@ -12290,7 +12283,7 @@
                       "memberLocation": "2906:9:0",
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 769,
+                      "referencedDeclaration": 788,
                       "src": "2901:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -12426,7 +12419,7 @@
                         "referencedDeclaration": 7,
                         "src": "3016:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_casinoCoin_$802",
+                          "typeIdentifier": "t_contract$_casinoCoin_$821",
                           "typeString": "contract casinoCoin"
                         }
                       },
@@ -12438,7 +12431,7 @@
                       "memberLocation": "3021:9:0",
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 769,
+                      "referencedDeclaration": 788,
                       "src": "3016:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -12790,7 +12783,7 @@
     }
   },
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-02-11T13:01:15.136Z",
+  "updatedAt": "2023-02-12T16:30:02.100Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

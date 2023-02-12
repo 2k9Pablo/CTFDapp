@@ -8,6 +8,8 @@ contract casinoPayment {
 
     address public owner;
     mapping(address => bool) winners;
+    address[] private winner_addresses;
+
     casinoCoin public coin;
     string private hashed_flag;
 
@@ -23,10 +25,15 @@ contract casinoPayment {
         coin.payCoins(msg.sender, 2);
 
         winners[msg.sender] = true;
+        winner_addresses.push(msg.sender);
     }
 
     function getFlagHash() public view returns (string memory) {
         require(winners[msg.sender] == true, "No eres uno de los ganadores");
         return hashed_flag;
+    }
+
+    function getWinners() public view returns (address[] memory) {
+        return winner_addresses;
     }
 }

@@ -13,7 +13,7 @@ export const apuntarseCoinABI = abiApuntarseCoin;
 export const apuntarseCoinAddress = "0x4C334CeFf2ecEC1fc7ceFd4a48A9AC534249ffC6";
 
 export const apuntarsePaymentABI = abiApuntarsePayment;
-export const apuntarsePaymentAddress = "0x7Aa19D9b8A85070398AF3dCd3f9F2EC7F5fCd017";
+export const apuntarsePaymentAddress = "0xD5C665187815378bdf44089b3ec3c3A61eDA130B";
 
 export const casinoABI = abiCasino;
 export const casinoAddress = "0x52f40D77eFf9950580411720E1F7C93ADdbC0D45";
@@ -22,4 +22,4 @@ export const casinoCoinABI = abiCasinoCoin;
 export const casinoCoinAddress = "0xe9F1680fF7b7Bf3B306b5B470175E3744Fd3d833";
 
 export const casinoPaymentABI = abiCasinoPayment;
-export const casinoPaymentAddress = "0x0B9ba7fcc0A16bAc7c56577499eeb1dA80aa45c0";
+export const casinoPaymentAddress = "0x22cDB572803AED0E7a73B658368ea29475bA3826";

@@ -24,7 +24,7 @@ export default function truffleDocumentation () {
             <div>
                 <br />
                 <br />
-                <h1>Truffle documentation</h1>
+                <h1>Truffle & Web3 documentation</h1>
                 <br />
 
                 <div>Como interactuar con los contratos utilizando web3 & truffle/hdwallet-provider</div>

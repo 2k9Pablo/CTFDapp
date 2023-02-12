@@ -170,7 +170,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 201,
-        "sourceUnit": 445,
+        "sourceUnit": 464,
         "src": "65:37:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -319,7 +319,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+              "typeIdentifier": "t_contract$_apuntarseCoin_$463",
               "typeString": "contract apuntarseCoin"
             },
             "typeName": {
@@ -327,10 +327,10 @@
               "id": 12,
               "name": "apuntarseCoin",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 444,
+              "referencedDeclaration": 463,
               "src": "312:13:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                 "typeString": "contract apuntarseCoin"
               }
             },
@@ -556,7 +556,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 459,
+                          "referencedDeclaration": 478,
                           "src": "667:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -649,7 +649,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 459,
+                        "referencedDeclaration": 478,
                         "src": "705:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -697,7 +697,7 @@
                       "referencedDeclaration": 13,
                       "src": "726:4:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                        "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                         "typeString": "contract apuntarseCoin"
                       }
                     },
@@ -712,13 +712,13 @@
                       "referencedDeclaration": 30,
                       "src": "733:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                        "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                         "typeString": "contract apuntarseCoin"
                       }
                     },
                     "src": "726:12:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                      "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                       "typeString": "contract apuntarseCoin"
                     }
                   },
@@ -741,7 +741,7 @@
                         "referencedDeclaration": 13,
                         "src": "749:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                          "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                           "typeString": "contract apuntarseCoin"
                         }
                       },
@@ -752,7 +752,7 @@
                       "lValueRequested": false,
                       "memberName": "mint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 443,
+                      "referencedDeclaration": 462,
                       "src": "749:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
@@ -801,7 +801,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                    "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                     "typeString": "contract apuntarseCoin"
                   },
                   "typeName": {
@@ -809,10 +809,10 @@
                     "id": 29,
                     "name": "apuntarseCoin",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 444,
+                    "referencedDeclaration": 463,
                     "src": "614:13:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                      "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                       "typeString": "contract apuntarseCoin"
                     }
                   },
@@ -1176,10 +1176,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        462,
-                        463
+                        481,
+                        482
                       ],
-                      "referencedDeclaration": 463,
+                      "referencedDeclaration": 482,
                       "src": "1007:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1292,10 +1292,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        462,
-                        463
+                        481,
+                        482
                       ],
-                      "referencedDeclaration": 463,
+                      "referencedDeclaration": 482,
                       "src": "1073:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1371,10 +1371,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        462,
-                        463
+                        481,
+                        482
                       ],
-                      "referencedDeclaration": 463,
+                      "referencedDeclaration": 482,
                       "src": "1167:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1431,7 +1431,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 459,
+                          "referencedDeclaration": 478,
                           "src": "1274:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1686,7 +1686,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 459,
+                            "referencedDeclaration": 478,
                             "src": "1399:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1752,10 +1752,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        462,
-                        463
+                        481,
+                        482
                       ],
-                      "referencedDeclaration": 463,
+                      "referencedDeclaration": 482,
                       "src": "1377:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1812,7 +1812,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 459,
+                          "referencedDeclaration": 478,
                           "src": "1472:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1934,7 +1934,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 459,
+                        "referencedDeclaration": 478,
                         "src": "1588:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2126,7 +2126,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 459,
+                          "referencedDeclaration": 478,
                           "src": "1788:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2164,7 +2164,7 @@
                         "referencedDeclaration": 13,
                         "src": "1773:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                          "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                           "typeString": "contract apuntarseCoin"
                         }
                       },
@@ -2175,7 +2175,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 412,
+                      "referencedDeclaration": 431,
                       "src": "1773:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -2276,7 +2276,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 474,
+                            "referencedDeclaration": 493,
                             "src": "1916:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_apuntarse_$200",
@@ -2335,7 +2335,7 @@
                         "referencedDeclaration": 13,
                         "src": "1893:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                          "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                           "typeString": "contract apuntarseCoin"
                         }
                       },
@@ -2346,7 +2346,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 412,
+                      "referencedDeclaration": 431,
                       "src": "1893:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -2462,7 +2462,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 459,
+                            "referencedDeclaration": 478,
                             "src": "2006:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2528,10 +2528,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        462,
-                        463
+                        481,
+                        482
                       ],
-                      "referencedDeclaration": 463,
+                      "referencedDeclaration": 482,
                       "src": "1984:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2568,7 +2568,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 459,
+                          "referencedDeclaration": 478,
                           "src": "2085:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2628,7 +2628,7 @@
                         "referencedDeclaration": 13,
                         "src": "2071:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_apuntarseCoin_$444",
+                          "typeIdentifier": "t_contract$_apuntarseCoin_$463",
                           "typeString": "contract apuntarseCoin"
                         }
                       },
@@ -2639,7 +2639,7 @@
                       "lValueRequested": false,
                       "memberName": "sendCoin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 360,
+                      "referencedDeclaration": 379,
                       "src": "2071:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -2724,7 +2724,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 445,
+          "SourceUnit": 464,
           "absolutePath": "project:/contracts/tokens/apuntarseCoin.sol",
           "file": "../tokens/apuntarseCoin.sol",
           "scope": 201,
@@ -2891,7 +2891,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "apuntarseCoin",
-                  "referencedDeclaration": 444,
+                  "referencedDeclaration": 463,
                   "type": "contract apuntarseCoin"
                 },
                 "id": 12,
@@ -3121,7 +3121,7 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "apuntarseCoin",
-                          "referencedDeclaration": 444,
+                          "referencedDeclaration": 463,
                           "type": "contract apuntarseCoin"
                         },
                         "id": 29,
@@ -3206,7 +3206,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 459,
+                                      "referencedDeclaration": 478,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -3296,7 +3296,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 459,
+                                  "referencedDeclaration": 478,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -3400,7 +3400,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "mint",
-                              "referencedDeclaration": 443,
+                              "referencedDeclaration": 462,
                               "type": "function () external"
                             },
                             "children": [
@@ -3854,10 +3854,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                462,
-                                463
+                                481,
+                                482
                               ],
-                              "referencedDeclaration": 463,
+                              "referencedDeclaration": 482,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -3973,10 +3973,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                462,
-                                463
+                                481,
+                                482
                               ],
-                              "referencedDeclaration": 463,
+                              "referencedDeclaration": 482,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -4092,10 +4092,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                462,
-                                463
+                                481,
+                                482
                               ],
-                              "referencedDeclaration": 463,
+                              "referencedDeclaration": 482,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -4199,7 +4199,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 459,
+                                      "referencedDeclaration": 478,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -4379,10 +4379,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                462,
-                                463
+                                481,
+                                482
                               ],
-                              "referencedDeclaration": 463,
+                              "referencedDeclaration": 482,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -4432,7 +4432,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 459,
+                                      "referencedDeclaration": 478,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -4532,7 +4532,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 459,
+                                      "referencedDeclaration": 478,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -4697,7 +4697,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 459,
+                                  "referencedDeclaration": 478,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -4923,7 +4923,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "balanceOf",
-                              "referencedDeclaration": 412,
+                              "referencedDeclaration": 431,
                               "type": "function (address) view external returns (uint256)"
                             },
                             "children": [
@@ -4964,7 +4964,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 459,
+                                  "referencedDeclaration": 478,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -5093,7 +5093,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "balanceOf",
-                              "referencedDeclaration": 412,
+                              "referencedDeclaration": 431,
                               "type": "function (address) view external returns (uint256)"
                             },
                             "children": [
@@ -5156,7 +5156,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 474,
+                                  "referencedDeclaration": 493,
                                   "type": "contract apuntarse",
                                   "value": "this"
                                 },
@@ -5260,10 +5260,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                462,
-                                463
+                                481,
+                                482
                               ],
-                              "referencedDeclaration": 463,
+                              "referencedDeclaration": 482,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
@@ -5313,7 +5313,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 459,
+                                      "referencedDeclaration": 478,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -5392,7 +5392,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "sendCoin",
-                              "referencedDeclaration": 360,
+                              "referencedDeclaration": 379,
                               "type": "function (address,uint256) external returns (bool)"
                             },
                             "children": [
@@ -5433,7 +5433,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 459,
+                                  "referencedDeclaration": 478,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -5512,7 +5512,7 @@
     }
   },
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-02-11T13:01:15.127Z",
+  "updatedAt": "2023-02-12T16:30:02.090Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
